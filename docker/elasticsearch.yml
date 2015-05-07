@@ -1,0 +1,3 @@
+---
+script.disable_dynamic: true
+http.cors.enabled: true
