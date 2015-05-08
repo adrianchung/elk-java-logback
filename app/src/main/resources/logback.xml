@@ -7,7 +7,17 @@
         </encoder>
     </appender>
 
+    <appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+      <!-- remoteHost and port are optional (default values shown) -->
+      <remoteHost>192.168.59.103</remoteHost>
+      <port>4560</port>
+
+      <!-- encoder is required -->
+      <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+  </appender>
+
     <root level="debug">
         <appender-ref ref="STDOUT" />
+        <appender-ref ref="stash" />
     </root>
 </configuration>
